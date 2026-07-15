@@ -1,73 +1,133 @@
-# Azure Solution Architecture
+# 🏛 Azure Solution Architecture
 
-This folder contains the high-level architecture of the Azure Banking Infrastructure Deployment project.
-
----
-
-## Architecture Diagram
-
-The diagram below represents the complete production-style Azure environment deployed during this project.
-
-![Azure Architecture](Azure-Banking-Infrastructure-Architecture.png)
+Production-Style Azure Banking Infrastructure Deployment
 
 ---
 
-## Architecture Overview
+## 📖 Overview
 
-The solution demonstrates a secure Azure environment built using Microsoft Azure best practices.
+This folder contains the high-level architecture diagram for the Azure Banking Infrastructure Deployment project.
 
-### Networking
+The solution was designed using Microsoft Azure best practices and demonstrates how enterprise workloads are deployed securely with networking, monitoring, governance, backup, and security services.
 
-- Azure Virtual Network
+---
+
+# 🖼 Architecture Diagram
+
+> **Enterprise Azure Banking Infrastructure**
+
+![Azure Banking Infrastructure Architecture](Azure-Banking-Infrastructure-Architecture.png)
+
+---
+
+# 🏗 Solution Components
+
+## Azure Subscription
+
+- Learning-labs
+
+---
+
+## Resource Group
+
+- rg-bank-prod-cin-001
+
+---
+
+## Networking
+
+- Virtual Network
+  - vnet-bank-prod-cin-001
+
+- Address Space
+  - 10.0.0.0/16
+
 - Web Subnet
-- Database Subnet
-- Public IP
-- Network Security Groups
+  - subnet-web
+  - 10.0.1.0/24
 
-### Compute
+- Database Subnet
+  - subnet-db
+  - 10.0.2.0/24
+
+- Public IP Address
+
+- Network Security Groups
+  - nsg-web-prod-001
+  - nsg-app-prod-001
+  - nsg-db-prod-001
+
+---
+
+## Compute
 
 - Windows Server Virtual Machine
-- Managed Disk
+  - vm-web-prod-001
+
+- Managed OS Disk
+
 - Boot Diagnostics
+
 - Managed Identity
-
-### Security
-
-- Azure Key Vault
-- Azure Policy
-- Network Security Groups
-
-### Storage
-
-- Azure Storage Account
-
-### Monitoring
-
-- Azure Monitor
-- Log Analytics Workspace
-- Metric Alerts
-- Action Group
-
-### Backup
-
-- Recovery Services Vault
-- Daily Backup Policy
-
-### Governance
-
-- Resource Tags
-- Resource Locks
-- Azure Policy Assignment
 
 ---
 
-## Project Flow
+## Storage
+
+- Storage Account
+
+- Blob Storage
+
+- File Shares
+
+- Tables
+
+---
+
+## Security
+
+- Azure Key Vault
+  - kv-bank-prod-001
+
+- Azure Policy
+
+- Network Security Groups
+
+- Resource Locks
+
+- Resource Tags
+
+---
+
+## Monitoring
+
+- Azure Monitor
+
+- Log Analytics Workspace
+  - logwork-bank-prod-001
+
+- Metric Alerts
+
+- Action Group
+
+---
+
+## Backup & Disaster Recovery
+
+- Recovery Services Vault
+  - rsv-bank-prod-001
+
+- Daily VM Backup Policy
+
+---
+
+# 🔄 Traffic Flow
 
 Internet
 
 ↓
 
-Public IP
+Public IP Address
 
 ↓
 
@@ -75,7 +135,15 @@ Virtual Network
 
 ↓
 
+Web Subnet
+
+↓
+
 Windows Server VM
+
+↓
+
+Azure Key Vault
 
 ↓
 
@@ -87,14 +155,52 @@ Recovery Services Vault
 
 ↓
 
-Azure Key Vault
-
-↓
-
 Azure Policy & Governance
 
 ---
 
-## Purpose
+# 🛡 Security Controls Implemented
 
-This architecture demonstrates how enterprise Azure environments are designed to meet security, governance, monitoring, backup, and operational best practices.
+- Azure RBAC
+- Managed Identity
+- Azure Key Vault
+- Network Security Groups
+- Azure Policy
+- Resource Locks
+- Resource Tags
+- Azure Monitor
+- Log Analytics
+- Azure Backup
+
+---
+
+# 📊 Services Used
+
+| Category | Azure Services |
+|-----------|----------------|
+| Identity | Azure RBAC, Managed Identity |
+| Networking | VNet, Subnets, NSGs, Public IP |
+| Compute | Azure Virtual Machine |
+| Storage | Storage Account |
+| Security | Azure Key Vault, Azure Policy |
+| Monitoring | Azure Monitor, Log Analytics |
+| Backup | Recovery Services Vault |
+| Governance | Resource Locks, Tags |
+
+---
+
+# 🎯 Project Objective
+
+This architecture demonstrates how a production-style Azure infrastructure can be deployed using Microsoft Azure services following enterprise security, governance, monitoring, backup, and operational best practices.
+
+The implementation aligns with Azure Well-Architected Framework principles for:
+
+- Security
+- Reliability
+- Operational Excellence
+- Performance Efficiency
+- Cost Optimization
+
+---
+
+**Project Status:** ✅ Completed
