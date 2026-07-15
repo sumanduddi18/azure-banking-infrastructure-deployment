@@ -16,7 +16,7 @@ The solution was designed using Microsoft Azure best practices and demonstrates 
 
 > **Enterprise Azure Banking Infrastructure**
 
-![Azure Banking Infrastructure Architecture](Azure-Banking-Infrastructure-Architecture.png)
+![Azure Banking Infrastructure Architecture](Azure-Banking-Infrastructure-Architecture.jpg)
 
 ---
 
