@@ -2,6 +2,9 @@
 
 > **Production-Style Azure Administration & Cloud Security Project**
 
+![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
+![Azure](https://img.shields.io/badge/Microsoft-Azure-blue)
+![Security](https://img.shields.io/badge/Cloud-Security-success)
 ---
 
 ## 📌 Project Overview
